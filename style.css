@@ -1,10 +1,70 @@
 body{
-    background-image: url("desenho-animado-chuva-de-dinheiro-padrao-sem-emenda-notas-de-papel-verde-e-moedas-de-ouro-voando-no-ar_221062-40.jpg");
+    background-image: linear-gradient(grey, white);
+    height: 686px;
 }
 
 h1{
-    background-color: antiquewhite;
     margin:auto;
     text-align: center;    
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#caixa{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1px;
+    margin-top: 50px;
+    margin-left: 40%;
+    margin-right: 42%;
+    box-shadow: 2px 2px 5px 2px black;
+}
+
+#visor{
+    border: 1.5pt solid black;
+    border-radius: 5px;
+    width: 15vw;
+    height: 4vw;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 12px;
+}
+
+.botao{
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.551);
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    width: 15%;
+    
+}
+
+.acao{
+    margin-top: 1px;
+    font-size: 20px;
+    height: 40px;
+    width: 30%;
+    
+}
+
+.operacao{
+    font-size: 23px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 45%;
+
+}
+
+.enter{
+    color: black;
+    background-color: green;
+}
+.anula{
+    color: black;
+    background-color: red;
 }

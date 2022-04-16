@@ -4,10 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="banco.js"></script>
+    <title>Patinha's Bank</title>
+    
+
 <body>
-    <h1>Caixa eletronico 24 horas</h1>
+
+    <h1>Caixa eletronico</h1>
+
+    <form action="" name="calc">
+        <div id="caixa">
+            <input type="text" id="visor" name="visor" aria-label="calculadora">
+            <div id="linha_1">
+                <input type="button" value="7" class="botao borda" onclick="botao(value)">
+                <input type="button" value="8" class="botao borda" onclick="botao(value)">
+                <input type="button" value="9" class="botao borda" onclick="botao(value)">
+                <input type="button" value="saque" class="botao borda operacao" onclick="sacar()">
+            </div>
+            <div id="linha_2">
+                <input type="button" value="4" class="botao borda" onclick="botao(value)">
+                <input type="button" value="5" class="botao borda" onclick="botao(value)">
+                <input type="button" value="6" class="botao borda" onclick="botao(value)">
+                <input type="button" value="deposito" class="botao borda operacao" onclick="depositar()">
+            </div>
+            <div id="linha_3">
+                <input type="button" value="1" class="botao borda" onclick="botao(value)">
+                <input type="button" value="2" class="botao borda" onclick="botao(value)">
+                <input type="button" value="3" class="botao borda" onclick="botao(value)">
+                <input type="button" value="saldo" class="botao borda operacao" onclick="saldo()">
+            </div>
+            <div id="linha_4">
+                <input type="button" value="0" class="botao borda" onclick="botao(value)">
+                <input type="button" value="C" class="botao borda" onclick="reseta()">
+                <input type="button" value="ENTER" class="botao enter acao" onclick="confirmar()">
+                <input type="button" value="ANULA" class="botao anula acao" onclick="anular()">
+            </div>
+        </div>
+    </form>
+
 </body>
+
+<script src="banco.js"></script>
+
 </html>

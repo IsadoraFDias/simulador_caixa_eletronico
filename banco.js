@@ -1,41 +1,53 @@
 alert("Insira o cartão")
 let confCartao = confirm("Cartão inserido?")
 let senha = prompt("Digite sua senha")
-let chEspecial = 300
-let saldo = 1000
-let novoSaldo = saldo
 
-    for (let opcao = 1; opcao <= 3; opcao++) {
+let saldoatual = 1000
+let novoSaldo = saldoatual //novoSaldo é igual a saldo, porque o novo saldo ja é o saldo em seu inicio
 
-        do {
-            opcao = prompt("O que deseja fazer?\n\n1- Depositar\n2- Sacar\n3- Ver saldo\n4- Sair ")
-            switch (opcao) {
-                case "1":
-                    let deposito = prompt("Qual valor do deposito?")
-                    confirm("Voce confirma o depósito de R$" + deposito + "?")
-                    novoSaldo+= parseInt(deposito)
-                    alert("Seu saldo atual é " + novoSaldo)
-                    break;
-                case "2":
-                    let saque = prompt("Qual o valor do saque?")
-                    confirm("Voce confirma o saque de R$" + saque + "?")
-                    novoSaldo -=  parseInt(saque)
-                    if (novoSaldo <-300) {
-                        alert("Saldo insuficiente, não é possivel completar o saque")
-                    }else if (novoSaldo <= -1){
-                        alert("Voce entrará no saldo do cheque especial")
-                        alert("Seu saldo atual é " + novoSaldo)
-                    }else{
-                    alert("Seu saldo atual é " + novoSaldo)}
-                    break;
-                case "3":
-                    alert("Seu saldo atual é R$" + novoSaldo +"\nValor do cheque especial é R$ "+chEspecial)
-                    break;
-                case "4":
-                    alert("Programa encerrado")
-                    break;
-                default:
-                    break;
-            }
-        } while (opcao != 4)
+let valor
+
+function botao(num){
+    valor = document.calc.visor.value = num;
+}
+
+
+function reseta() {
+    document.calc.visor.value= '';
+}
+
+function anular() {
+    document.calc.visor.value = '';
+    alert("Programa encerrado, retire seu cartao")
+}
+
+
+function confirmar() {
+    document.calc.visor.value = `Operacao confirmada.`
+}
+
+function depositar(num) {
+    let deposito = document.calc.visor.value += num
+    novoSaldo += parseInt(deposito) //novoSaldo soma o deposito e devolve em saldo, pq o novoSaldo é igual ao saldo... <o>jessussss
+
+    document.calc.visor.value = `Confirma?`
+
+    
+}
+
+function sacar(num) {
+    let saque = document.calc.visor.value += num
+    novoSaldo -= parseInt(saque)
+    if (novoSaldo < 0) {
+        alert("Saldo insuficiente, não é possivel completar o saque")
+    } else {
+        
+        document.calc.visor.value = "Confirma?"
     }
+
+}
+
+function saldo() {
+    document.calc.visor.value = novoSaldo.toLocaleString('pt-br')
+}
+
